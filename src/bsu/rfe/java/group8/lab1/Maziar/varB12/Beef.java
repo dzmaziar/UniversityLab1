@@ -10,9 +10,9 @@ public class Beef extends Food implements Nutritios{
         this.preparedness = Preparadness;
     }
 
-    public void consume()
+    public void consum()
     {
-        System.out.println(this + "  съеден");
+        System.out.println( "Мясо " + this.preparedness + "  съедено");
     }
 
     @Override
@@ -49,4 +49,10 @@ public class Beef extends Food implements Nutritios{
             Beef buff = (Beef) obj;
             return preparedness == buff.preparedness;
     }
+    public String toString() {
+        return "Мясо{" +
+                "готовность='" + preparedness + '\'' +
+                '}';
+    }
+
 }
